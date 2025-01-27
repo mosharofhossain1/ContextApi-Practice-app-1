@@ -1,9 +1,13 @@
 // import React from 'react';
 
+import { useContext } from "react";
+import { AnotherContext } from "../../App";
+
 const SecondCompo = () => {
+    const [another, setAnother] = useContext(AnotherContext);
     return (
         <div>
-            <p>Second Compo - </p>
+            <button onClick={() => setAnother(another + 5)}>Second Compo - {another}</button>
         </div>
     );
 };
